@@ -4,3 +4,15 @@
 [submodule "gfx"]
 	path = gfx
 	url = git@github.com:adafruit/Adafruit-GFX-Library.git
+[submodule "debug"]
+	path = debug
+	url = git@github.com:matthiasbock/nRF51-debug.git
+[submodule "nordic"]
+	path = nordic
+	url = git@github.com:matthiasbock/nRF51-nordic.git
+[submodule "arm"]
+	path = arm
+	url = git@github.com:matthiasbock/nRF51-arm.git
+[submodule "sdk"]
+	path = sdk
+	url = git@github.com:matthiasbock/nRF51-sdk.git
