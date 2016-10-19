@@ -1,0 +1,9 @@
+# Eclipse
+.project
+.cproject
+.settings/
+
+# Binaries
+*.o
+*.elf
+
