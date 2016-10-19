@@ -1,0 +1,38 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+C109       AP1-00003             34.54mm     50.9249mm       34.54mm     50.9249mm       34.54mm     50.0999mm  T         90.00 Generic part, no manufacturer specified.
+C105       AP1-00003              40.7mm     50.9249mm        40.7mm     50.9249mm        40.7mm     50.0999mm  T         90.00 Generic part, no manufacturer specified.
+R106       AP2-00000                50mm       12.95mm          50mm       12.95mm          50mm       12.35mm  T         90.00 R2             
+R105       AP2-00000                35mm       12.95mm          35mm       12.95mm          35mm       12.35mm  T         90.00 R2             
+R104       AP2-00000                20mm       12.95mm          20mm       12.95mm          20mm       12.35mm  T         90.00 R2             
+SW101      AP8-00137                30mm          15mm          30mm          15mm       27.25mm          17mm  T        360.00 SKRAAKE010     
+SW100      AP8-00137                15mm          15mm          15mm          15mm       12.25mm          17mm  T        360.00 SKRAAKE010     
+SW102      AP8-00137                45mm          15mm          45mm          15mm       42.25mm          17mm  T        360.00 SKRAAKE010     
+R101       AP2-00000             16.75mm     25.1545mm       16.75mm     25.1545mm       16.75mm     24.5545mm  T         90.00 R2             
+D101       AP4-00013                15mm          25mm          15mm          25mm          15mm       26.05mm  T        270.00 Yellow         
+R107       AP2-00000             32.54mm        50.5mm       32.54mm        50.5mm       32.54mm        49.9mm  T         90.00 390k           
+R108       AP2-00000             30.64mm        50.5mm       30.64mm        50.5mm       30.64mm        49.9mm  T         90.00 100k           
+OLED100    AP9-00080                39mm          43mm          28mm          43mm          39mm       38.45mm  T        360.00 UG-2832HSWEG04 
+C108       AP1-00039           36.3932mm     35.3034mm     36.3932mm     35.3034mm     36.3932mm     36.0019mm  T        270.00 1uF            
+C107       AP1-00039           38.1921mm     35.3034mm     38.1921mm     35.3034mm     38.1921mm     36.0019mm  T        270.00 1uF            
+C106       AP1-00001              42.7mm     50.5999mm        42.7mm     50.5999mm        42.7mm     50.0499mm  T         90.00 100n           
+C104       AP1-00001           31.0932mm     35.4139mm     31.0932mm     35.4139mm     31.0932mm     35.9639mm  T        270.00 100n           
+C103       AP1-00039           32.7932mm     35.3034mm     32.7932mm     35.3034mm     32.7932mm     36.0019mm  T        270.00 1uF            
+C102       AP1-00039           34.5932mm     35.3034mm     34.5932mm     35.3034mm     34.5932mm     36.0019mm  T        270.00 1uF            
+E4         AP8-00192           -164.08mm     -142.48mm        55.6mm           9mm     -164.08mm     -142.48mm  B        180.00 RUBBER FEET    
+E3         AP8-00192           -164.08mm     -142.48mm         4.4mm           9mm     -164.08mm     -142.48mm  B        180.00 RUBBER FEET    
+E1         AP8-00192           -164.08mm     -142.48mm         4.4mm          51mm     -164.08mm     -142.48mm  B        180.00 RUBBER FEET    
+E2         AP8-00192           -164.08mm     -142.48mm        55.6mm          51mm     -164.08mm     -142.48mm  B        180.00 RUBBER FEET    
+U100       AP4-00018              46.6mm        56.4mm        46.6mm        56.4mm       47.55mm       55.45mm  T        180.00 ATSHA204_SOT23 
+J100       AP8-00621                30mm        56.2mm          30mm        56.2mm       41.43mm       54.93mm  T        360.00 HEADER-2X10    
+D100       AP4-00036            49.425mm      55.625mm      49.425mm      55.625mm      49.425mm      56.325mm  T        270.00 Farnell# 1615809
+C100       AP1-00001              49.9mm      57.725mm        49.9mm      57.725mm       49.35mm      57.725mm  T        360.00 CAP-NONPOL     
+LABEL1     AP8-00317           -164.08mm     -142.48mm          39mm         0.8mm     -164.08mm     -142.48mm  B        180.00 PCBA_LABEL     
+D102       AP4-00013                30mm          25mm          30mm          25mm          30mm       26.05mm  T        270.00 Yellow         
+D103       AP4-00013                45mm          25mm          45mm          25mm          45mm       26.05mm  T        270.00 Yellow         
+R102       AP2-00000              31.8mm     25.1545mm        31.8mm     25.1545mm        31.8mm     24.5545mm  T         90.00 R2             
+R103       AP2-00000              46.8mm     25.1545mm        46.8mm     25.1545mm        46.8mm     24.5545mm  T         90.00 R2             
+C101       AP1-00001            16.175mm        56.2mm      16.175mm        56.2mm      16.175mm       55.65mm  T         90.00 CAP-NONPOL     
+R110       AP2-00000              49.9mm        59.1mm        49.9mm        59.1mm        50.5mm        59.1mm  T        180.00 R2             
+R109       AP2-00000             28.74mm        50.5mm       28.74mm        50.5mm       28.74mm        49.9mm  T         90.00 100k           
+

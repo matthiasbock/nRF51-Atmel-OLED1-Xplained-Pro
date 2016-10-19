@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: OLED_Xplained_PRO.PcbDoc   21.11.2012  11:10:47
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer LF-signals to Bottom Layer LF-signals
+ASCII RoundHoles File : OLED_Xplained_PRO.TXT
+EIA File   : OLED_Xplained_PRO.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        9.8mil (0.24892mm)       Round          32               8.05 Inch (204.59 mm)
+T2        39.4mil (1.00076mm)      Round          20               1.90 Inch (48.26 mm)
+T3        106.3mil (2.70002mm)     Round          4                7.43 Inch (188.81 mm)
+T4        78.7mil (1.99898mm)      Round          2         NPTH   0.60 Inch (15.24 mm)
+---------------------------------------------------------------------------
+Totals                                            58               17.99 Inch (456.90 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
