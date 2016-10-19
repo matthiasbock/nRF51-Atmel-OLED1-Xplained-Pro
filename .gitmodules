@@ -1,0 +1,6 @@
+[submodule "ssd1306"]
+	path = ssd1306
+	url = git@github.com:adafruit/Adafruit_SSD1306.git
+[submodule "gfx"]
+	path = gfx
+	url = git@github.com:adafruit/Adafruit-GFX-Library.git
