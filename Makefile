@@ -28,6 +28,9 @@ CFLAGS += -I arm/
 CFLAGS += -I nordic/
 CFLAGS += -I nordic/sdk/nrf51822/Include
 CFLAGS += -I sdk/
+CFLAGS += -I sdk/arduino/
+CFLAGS += -I gfx/
+CFLAGS += -I ssd1306/
 
 # TODO: auto-detect chip revision
 CHIP_REVISION = aa
@@ -52,7 +55,7 @@ SOFTDEVICE = nordic/softdevice/s110_nrf51822_7.3.0_softdevice.hex
 #
 # Build targets
 #
-all: demo_buttons.elf
+all: demo_buttons.elf demo_oled.elf
 
 clean:
 	rm -f *.o *.elf
@@ -60,9 +63,14 @@ clean:
 %.o: %.c %s
 	$(CC) $(CFLAGS) -c $< -o $@
 
-#main.elf: main.c gfx/Adafruit_GFX.cpp ssd1306/Adafruit_SSD1306.cpp
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
 demo_buttons.elf: sdk/nrf51_startup.o nordic/system_nrf51.o demo_buttons.o
 	$(LD) $(LDFLAGS) $^ -o $@
 
-debug:
-	cd debug/ && make debug
+demo_oled.elf: sdk/nrf51_startup.o nordic/system_nrf51.o sdk/arduino/Arduino.o sdk/arduino/Print.o sdk/arduino/WString.o sdk/arduino/SPI.o gfx/Adafruit_GFX.o ssd1306/Adafruit_SSD1306.o demo_oled.o
+	$(LD) $(LDFLAGS) $^ -o $@
+
+include debug/Makefile
+
