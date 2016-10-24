@@ -22,22 +22,18 @@ void main()
             );
     begin(SSD1306_SWITCHCAPVCC, 0, true);
 
-    // Clear the buffer.
+    // clear the buffer.
     clearDisplay();
 
-    // draw a single pixel
-    drawPixel(10, 10, WHITE);
-    drawChar(20, 0, &font['A'], 5, 7);
-    display();
-
+    uint32_t selector = 0;
     while (1)
     {
-        asm("wfi");
-        /*
-        invertDisplay(0);
-        delay(200);
-        invertDisplay(1);
-        delay(200);
-        */
+        // print a character to screen
+        drawChar(20, 0, &font[selector], 5, 7);
+        selector = (selector + 5) % (5*256);
+        display();
+
+        // wait a little before continuing
+        delay(10);
     }
 }

@@ -178,7 +178,7 @@ void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t c
         uint8_t* c = font+ix;
 
         // iterate over all pixels of current vertical line
-        for (uint8_t iy=0, mask=0x80; iy<char_height; iy++, mask >>= 1)
+        for (uint8_t iy=0, mask=1; iy<char_height; iy++, mask <<= 1)
         {
             // 1 => draw white pixel
             if ((*c) & mask)
@@ -193,7 +193,6 @@ void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t c
         }
     }
 }
-
 
 void begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
   _vccstate = vccstate;
