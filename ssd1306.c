@@ -166,6 +166,33 @@ void drawPixel(uint16_t x, uint16_t y, uint16_t color)
 
 }
 
+/**
+ * Draw character from font to display
+ */
+void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t char_height)
+{
+    // vertical lines
+    for (uint8_t ix=0; ix<char_width; ix++)
+    {
+        // font is organized as one vertical line of pixels per byte(?)
+        uint8_t* c = font+ix;
+
+        // iterate over all pixels of current vertical line
+        for (uint8_t iy=0, mask=0x80; iy<char_height; iy++, mask >>= 1)
+        {
+            // 1 => draw white pixel
+            if ((*c) & mask)
+            {
+                drawPixel(x+ix, y+iy, WHITE);
+            }
+            // 0 => clear current pixel
+            else
+            {
+                drawPixel(x+ix, y+iy, BLACK);
+            }
+        }
+    }
+}
 
 
 void begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
