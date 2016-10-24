@@ -146,6 +146,7 @@ void dim(boolean dim);
 
 void drawPixel(uint16_t x, uint16_t y, uint16_t color);
 void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t char_height);
+void oled_println(char* s, uint8_t liney, uint8_t* font);
 
 void drawFastVLine(uint16_t x, uint16_t y, uint16_t h, uint16_t color);
 void drawFastHLine(uint16_t x, uint16_t y, uint16_t w, uint16_t color);

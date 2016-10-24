@@ -25,15 +25,15 @@ void main()
     // clear the buffer.
     clearDisplay();
 
-    uint32_t selector = 0;
     while (1)
     {
-        // print a character to screen
-        drawChar(20, 0, &font[selector], 5, 7);
-        selector = (selector + 5) % (5*256);
+        // print some text to screen
+        oled_println("Od'et amo.", 0, &font);
+        oled_println("Quar'id faciam,", 1, &font);
+        oled_println("fortasse requiris...", 2, &font);
+        oled_println("nRFduino FTW!!", 3, &font);
         display();
 
-        // wait a little before continuing
-        delay(10);
+        asm("wfi");
     }
 }

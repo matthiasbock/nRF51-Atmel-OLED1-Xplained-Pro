@@ -194,6 +194,22 @@ void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t c
     }
 }
 
+void oled_println(char* s, uint8_t liney, uint8_t* font)
+{
+    uint8_t index = 0;
+    const uint8_t max_length = 22;
+    const uint8_t char_width = 5;
+    const uint8_t char_height = 7;
+
+    while (*(s+index) != 0 && index < max_length)
+    {
+        uint8_t c = *(s+index);
+        uint8_t* char_bitmask = font + (c*5);
+        drawChar(index*(char_width+1), liney*(char_height+1), char_bitmask, char_width, char_height);
+        index++;
+    }
+}
+
 void begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
   _vccstate = vccstate;
 
