@@ -10,3 +10,6 @@
 [submodule "sdk"]
 	path = sdk
 	url = git@github.com:matthiasbock/nRF51-sdk.git
+[submodule "pcb"]
+	path = pcb
+	url = git@github.com:matthiasbock/nRFduino-ATOLED1-XPRO-Adapter.PCB.git

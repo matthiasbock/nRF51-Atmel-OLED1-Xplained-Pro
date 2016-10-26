@@ -1,15 +1,16 @@
 
+#include <stdint.h>
 #include <stdbool.h>
 
 #include "nrf_delay.h"
 
-#include "pin_config.h"
+#include "pcb/pinout.h"
 #include "ssd1306.h"
 
 // ASCII 5x7 font
 #include "gfx/glcdfont.c"
 
-//extern const unsigned char font[];
+//#include "bcd.c"
 
 void main()
 {

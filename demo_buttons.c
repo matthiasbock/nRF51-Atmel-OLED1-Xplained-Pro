@@ -8,7 +8,7 @@
 #include "nrf_gpio.h"
 #include "nrf_delay.h"
 
-#include "pin_config.h"
+#include "pcb/pinout.h"
 
 // LED on macro
 #define led_on(pin)             nrf_gpio_pin_clear(pin);
