@@ -10,7 +10,7 @@
 // ASCII 5x7 font
 #include "gfx/glcdfont.c"
 
-//#include "bcd.c"
+#include "oled.h"
 
 void main()
 {

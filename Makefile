@@ -69,7 +69,7 @@ clean:
 demo_buttons.elf: sdk/nrf51_startup.o nordic/system_nrf51.o demo_buttons.o
 	$(LD) $(LDFLAGS) $^ -o $@
 
-demo_oled.elf: sdk/nrf51_startup.o nordic/system_nrf51.o nordic/nrf_delay.o sdk/arduino/Arduino.o gfx/glcdfont.o ssd1306.o demo_oled.o
+demo_oled.elf: sdk/nrf51_startup.o nordic/system_nrf51.o nordic/nrf_delay.o sdk/arduino/Arduino.o gfx/glcdfont.o ssd1306.o oled.o demo_oled.o
 	$(LD) $(LDFLAGS) $^ -o $@
 
 .PHONY: debug
