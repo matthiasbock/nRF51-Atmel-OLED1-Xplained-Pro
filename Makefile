@@ -24,7 +24,7 @@ CFLAGS += -ffreestanding
 # keep every function in separate section. This will allow linker to dump unused functions
 CFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
 CFLAGS += -fno-builtin --short-enums
-CFLAGS += -I arm/
+CFLAGS += -I nordic/arm/
 CFLAGS += -I nordic/
 CFLAGS += -I nordic/sdk/nrf51822/Include
 CFLAGS += -I sdk/
@@ -72,5 +72,6 @@ demo_buttons.elf: sdk/nrf51_startup.o nordic/system_nrf51.o demo_buttons.o
 demo_oled.elf: sdk/nrf51_startup.o nordic/system_nrf51.o nordic/nrf_delay.o sdk/arduino/Arduino.o gfx/glcdfont.o ssd1306.o demo_oled.o
 	$(LD) $(LDFLAGS) $^ -o $@
 
-include debug/Makefile
+.PHONY: debug
+include sdk/debug/Makefile
 
