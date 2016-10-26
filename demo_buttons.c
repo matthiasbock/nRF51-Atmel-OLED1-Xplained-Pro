@@ -19,19 +19,19 @@
 
 void init_leds()
 {
-    nrf_gpio_cfg_output(PIN_LED1);
-    led_off(PIN_LED1);
-    nrf_gpio_cfg_output(PIN_LED2);
-    led_off(PIN_LED2);
-    nrf_gpio_cfg_output(PIN_LED3);
-    led_off(PIN_LED3);
+    nrf_gpio_cfg_output(ATOLED1_XPRO_PIN_LED1);
+    led_off(ATOLED1_XPRO_PIN_LED1);
+    nrf_gpio_cfg_output(ATOLED1_XPRO_PIN_LED2);
+    led_off(ATOLED1_XPRO_PIN_LED2);
+    nrf_gpio_cfg_output(ATOLED1_XPRO_PIN_LED3);
+    led_off(ATOLED1_XPRO_PIN_LED3);
 }
 
 void init_buttons()
 {
-    nrf_gpio_cfg_input(PIN_BUTTON1, NRF_GPIO_PIN_PULLUP);
-    nrf_gpio_cfg_input(PIN_BUTTON2, NRF_GPIO_PIN_PULLUP);
-    nrf_gpio_cfg_input(PIN_BUTTON3, NRF_GPIO_PIN_PULLUP);
+    nrf_gpio_cfg_input(ATOLED1_XPRO_PIN_BUTTON1, NRF_GPIO_PIN_PULLUP);
+    nrf_gpio_cfg_input(ATOLED1_XPRO_PIN_BUTTON2, NRF_GPIO_PIN_PULLUP);
+    nrf_gpio_cfg_input(ATOLED1_XPRO_PIN_BUTTON3, NRF_GPIO_PIN_PULLUP);
 }
 
 void main()
@@ -41,20 +41,20 @@ void main()
 
     while (1)
     {
-        if (button_pressed(PIN_BUTTON1))
-            led_on(PIN_LED1)
+        if (button_pressed(ATOLED1_XPRO_PIN_BUTTON1))
+            led_on(ATOLED1_XPRO_PIN_LED1)
         else
-            led_off(PIN_LED1);
+            led_off(ATOLED1_XPRO_PIN_LED1);
 
-        if (button_pressed(PIN_BUTTON2))
-            led_on(PIN_LED2)
+        if (button_pressed(ATOLED1_XPRO_PIN_BUTTON2))
+            led_on(ATOLED1_XPRO_PIN_LED2)
         else
-            led_off(PIN_LED2);
+            led_off(ATOLED1_XPRO_PIN_LED2);
 
-        if (button_pressed(PIN_BUTTON3))
-            led_on(PIN_LED3)
+        if (button_pressed(ATOLED1_XPRO_PIN_BUTTON3))
+            led_on(ATOLED1_XPRO_PIN_LED3)
         else
-            led_off(PIN_LED3);
+            led_off(ATOLED1_XPRO_PIN_LED3);
 
         nrf_delay_us(10000);
     }

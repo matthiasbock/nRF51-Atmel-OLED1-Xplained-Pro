@@ -15,11 +15,11 @@
 void main()
 {
     init_ssd1306(
-            PIN_OLED_DISPLAY_RESET,
-            PIN_OLED_DISPLAY_SS,
-            PIN_OLED_DATA_CMD_SEL,
-            PIN_OLED_SPI_SCK,
-            PIN_OLED_SPI_MOSI
+            ATOLED1_XPRO_PIN_OLED_DISPLAY_RESET,
+            ATOLED1_XPRO_PIN_OLED_DISPLAY_SS,
+            ATOLED1_XPRO_PIN_OLED_DATA_CMD_SEL,
+            ATOLED1_XPRO_PIN_OLED_SPI_SCK,
+            ATOLED1_XPRO_PIN_OLED_SPI_MOSI
             );
     begin(SSD1306_SWITCHCAPVCC, 0, true);
 
