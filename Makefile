@@ -35,7 +35,11 @@ CFLAGS += -I ssd1306/
 # TODO: auto-detect chip revision
 CHIP_REVISION = aa
 
+# without SoftDevice:
 LINKER_SCRIPT = sdk/linker/nrf51-blank-xx$(CHIP_REVISION).ld
+# with SoftDevice:
+#LINKER_SCRIPT = sdk/linker/nrf51-s110-xx$(CHIP_REVISION).ld
+
 LDFLAGS += -T $(LINKER_SCRIPT)
 LDFLAGS += -L /usr/lib/gcc/arm-none-eabi/4.8/armv6-m/
 LDFLAGS += -L /usr/lib/arm-none-eabi/newlib/armv6-m/

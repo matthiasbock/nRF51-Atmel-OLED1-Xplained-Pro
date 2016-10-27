@@ -120,7 +120,7 @@ All text above, and the splash screen must be included in any redistribution
 #define SSD1306_VERTICAL_AND_RIGHT_HORIZONTAL_SCROLL    0x29
 #define SSD1306_VERTICAL_AND_LEFT_HORIZONTAL_SCROLL     0x2A
 
-void init_ssd1306(
+void ssd1306_init(
         uint8_t reset,
         uint8_t ss,
         uint8_t cd_sel,
@@ -128,12 +128,12 @@ void init_ssd1306(
         uint8_t mosi
         );
 
-void begin(uint8_t switchvcc, uint8_t i2caddr, bool reset);
+void ssd1306_begin(uint8_t switchvcc, uint8_t i2caddr, bool reset);
 void ssd1306_command(uint8_t c);
 
-void clearDisplay(void);
+void ssd1306_clear(void);
 void invertDisplay(uint8_t i);
-void display();
+void ssd1306_display();
 
 void startscrollright(uint8_t start, uint8_t stop);
 void startscrollleft(uint8_t start, uint8_t stop);

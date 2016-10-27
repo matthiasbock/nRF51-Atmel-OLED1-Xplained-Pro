@@ -113,7 +113,7 @@ static uint8_t buffer[SSD1306_LCDHEIGHT * SSD1306_LCDWIDTH / 8] = {
 /**
  * Set the pins, where the display is connected
  */
-void init_ssd1306(
+void ssd1306_init(
         uint8_t reset,
         uint8_t ss,
         uint8_t cd_sel,
@@ -166,7 +166,7 @@ void drawPixel(uint16_t x, uint16_t y, uint16_t color)
 
 }
 
-void begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
+void ssd1306_begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
   _vccstate = vccstate;
 
   // set pin directions
@@ -424,7 +424,7 @@ void dim(boolean dim) {
   ssd1306_command(contrast);
 }
 
-void display(void) {
+void ssd1306_display(void) {
   ssd1306_command(SSD1306_COLUMNADDR);
   ssd1306_command(0);   // Column start address (0 = reset)
   ssd1306_command(SSD1306_LCDWIDTH-1); // Column end address (127 = reset)
@@ -495,7 +495,7 @@ void display(void) {
 }
 
 // clear everything
-void clearDisplay(void) {
+void ssd1306_clear(void) {
   memset(buffer, 0, (SSD1306_LCDWIDTH*SSD1306_LCDHEIGHT/8));
 }
 

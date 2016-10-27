@@ -2,21 +2,21 @@
 #include "oled.h"
 
 /**
- * Draw character from font to display
+ * Draw character to specified pixel coordinates
  */
-void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t char_height)
+void printcxy(uint8_t x, uint8_t y, uint8_t c)
 {
     // vertical lines
-    for (uint8_t ix=0; ix<char_width; ix++)
+    for (uint8_t ix=0; ix<CHAR_WIDTH; ix++)
     {
-        // font is organized as one vertical line of pixels per byte(?)
-        uint8_t* c = font+ix;
+        // font is organized as one vertical line of pixels per byte
+        uint8_t b = font[c++];
 
         // iterate over all pixels of current vertical line
-        for (uint8_t iy=0, mask=1; iy<char_height; iy++, mask <<= 1)
+        for (uint8_t iy=0, mask=1; iy<CHAR_HEIGHT; iy++, mask <<= 1)
         {
             // 1 => draw white pixel
-            if ((*c) & mask)
+            if (b & mask)
             {
                 drawPixel(x+ix, y+iy, WHITE);
             }
@@ -29,18 +29,16 @@ void drawChar(uint8_t x, uint8_t y, uint8_t* font, uint8_t char_width, uint8_t c
     }
 }
 
-void oled_println(char* s, uint8_t liney, uint8_t* font)
+/**
+ * Print a string to line number (0+)
+ */
+void printsy(uint8_t liney, char* s)
 {
     uint8_t index = 0;
-    const uint8_t max_length = 22;
-    const uint8_t char_width = 5;
-    const uint8_t char_height = 7;
 
-    while (*(s+index) != 0 && index < max_length)
+    while (s[index] != 0 && index < MAX_LENGTH)
     {
-        uint8_t c = *(s+index);
-        uint8_t* char_bitmask = font + (c*5);
-        drawChar(index*(char_width+1), liney*(char_height+1), char_bitmask, char_width, char_height);
+        printcxy(index*(CHAR_WIDTH+1), liney*(CHAR_HEIGHT+1), s[index]);
         index++;
     }
 }
